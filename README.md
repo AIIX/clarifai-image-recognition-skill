@@ -1,4 +1,4 @@
-# mycroft-internals-plasma-skill
+# clarifai-image-recognition-skill
 This skill enables Image Recognition for Mycroft based on Clarifai's free Image Recognition api.
 
 #### Installation of skill:
