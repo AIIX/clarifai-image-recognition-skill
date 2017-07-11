@@ -1,0 +1,7 @@
+{
+  "utterance": "search",
+  "intent_type": "ImgRecogKeywordIntent",
+  "intent": {
+    "ImgRecogKeyword": "image url"
+  }
+}
