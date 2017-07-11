@@ -13,6 +13,8 @@ This skill enables Image Recognition for Mycroft based on Clarifai's free Image 
 ##### How To Use: 
 - search image url {URL}
 
+###### Note: To use your own API Key / Secret Key Pairs make the change in __init__.py.
+
 ## Current state
 
 Working features:
