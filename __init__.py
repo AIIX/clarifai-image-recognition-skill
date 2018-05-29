@@ -1,10 +1,9 @@
 import sys
 import dbus
-import glib
 from traceback import print_exc
 from os.path import dirname
 from adapt.intent import IntentBuilder
-from mycroft.skills.core import MycroftSkill
+from mycroft.skills.core import MycroftSkill, intent_handler
 from mycroft.util.log import getLogger
 from clarifai.rest import ClarifaiApp
 from clarifai.rest import Image as ClImage 
@@ -19,15 +18,7 @@ class ImgRecogPlasmaDesktopSkill(MycroftSkill):
     def __init__(self):
         super(ImgRecogPlasmaDesktopSkill, self).__init__(name="ImgRecogPlasmaDesktopSkill")
         
-    # This method loads the files needed for the skill's functioning, and
-    # creates and registers each intent that the skill uses
-    def initialize(self):
-        self.load_data_files(dirname(__file__))
-
-        imgrecog_general_plasma_skill_intent = IntentBuilder("ImgRecogKeywordIntent").\
-            require("ImgRecogKeyword").build()
-        self.register_intent(imgrecog_general_plasma_skill_intent, self.handle_imgrecog_general_plasma_skill_intent)
-        
+    @intent_handler(IntentBuilder("ImgRecogKeywordIntent").require("ImgRecogKeyword").build())
     def handle_imgrecog_general_plasma_skill_intent(self, message):
         utterance = message.data.get('utterance')
         utterance = utterance.replace(
