@@ -1,7 +1,7 @@
 {
-  "utterance": "search",
-  "intent_type": "ImgRecogKeywordIntent",
+  "utterance": "ocr",
+  "intent_type": "ImgOcrKeywordIntent",
   "intent": {
-    "ImgRecogKeyword": "image url"
+    "ImgOcrKeyword": "image url"
   }
 }

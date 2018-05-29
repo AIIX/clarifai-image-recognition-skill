@@ -1,1 +1,3 @@
-clarifai 
+pyenchant
+pytesseract
+nltk
